@@ -2,7 +2,6 @@ import { FC } from "react";
 import Sider from "antd/es/layout/Sider";
 import { sidebarItems } from "../utils/data";
 import SidebarItem from "./SidebarItem";
-import settingsIcon from "../assets/Settings.svg";
 
 interface SidebarProps {}
 
@@ -31,27 +30,9 @@ const Sidebar: FC<SidebarProps> = () => {
           alignItems: "center",
         }}
       >
-        {sidebarItems.map((item) => (
-          <SidebarItem item={item} key={item.title} />
+        {sidebarItems.map((item, i) => (
+          <SidebarItem item={item} key={item.title} index={i} />
         ))}
-      </div>
-
-      <div
-        style={{
-          marginTop: "auto",
-          display: "flex",
-          alignItems: "center",
-          flexDirection: "column",
-        }}
-      >
-        <img
-          src={settingsIcon}
-          alt=""
-          style={{
-            width: "34px",
-            height: "34px",
-          }}
-        />
       </div>
     </Sider>
   );

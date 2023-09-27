@@ -7,6 +7,7 @@ import heartIcon from "../assets/heartIcon.svg";
 import shareIcon from "../assets/shareIcon.svg";
 import homeIcon from "../assets/houseIcon.svg";
 import chevronIcon from "../assets/chevronRight.svg";
+import settingsIcon from "../assets/Settings.svg";
 
 export const sidebarItems = [
   {
@@ -55,5 +56,10 @@ export const sidebarItems = [
     icon: chevronIcon,
     isActive: false,
     title: "Back",
+  },
+  {
+    icon: settingsIcon,
+    isActive: false,
+    title: "Settings",
   },
 ];
